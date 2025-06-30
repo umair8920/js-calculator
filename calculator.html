@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Simple JS Calculator</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/calc.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Simple Calculator</h1>
+    
+    <div class="calculator-controls">
+      <button id="startCalc" class="btn-primary">Start New Calculation</button>
+    </div>
+
+    <div id="resultsContainer">
+      <div id="detailedResults"></div>
+      <div id="summaryResults"></div>
+    </div>
+  </div>
+
+  <!-- Custom Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalTitle">Enter Calculation</h2>
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="input-group">
+          <label for="firstNumber">First Number:</label>
+          <input type="number" id="firstNumber" placeholder="Enter first number">
+        </div>
+        <div class="input-group">
+          <label for="operator">Operator:</label>
+          <select id="operator">
+            <option value="+">+ (Addition)</option>
+            <option value="-">- (Subtraction)</option>
+            <option value="*">× (Multiplication)</option>
+            <option value="/">÷ (Division)</option>
+            <option value="%">% (Modulus)</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="secondNumber">Second Number:</label>
+          <input type="number" id="secondNumber" placeholder="Enter second number">
+        </div>
+        <div class="modal-actions">
+          <button id="calculateBtn" class="btn-primary">Calculate</button>
+          <button id="finishBtn" class="btn-secondary">Finish & Show Results</button>
+          <button id="cancelBtn" class="btn-secondary">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html> 

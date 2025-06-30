@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+table.detail {
+  margin-bottom: 15px;
+}
+
+table.detail td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #ecf0f1;
+  font-size: 14px;
+}
+
+table.detail tr:last-child td {
+  border-bottom: none;
+}
+
+table.detail tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+table.summary th,
+table.summary td {
+  padding: 15px;
+  text-align: center;
+  font-weight: 500;
+}
+
+table.summary th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+table.summary td {
+  background: white;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+/* Error and success styling */
+p {
+  text-align: center;
+  color: #7f8c8d;
+  font-style: italic;
+  padding: 40px;
+  background: white;
+  border-radius: 10px;
+  border: 2px dashed #bdc3c7;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin: 10px auto;
+  }
+  
+  table {
+    margin: 10px auto;
+  }
+  
+  table.detail td,
+  table.summary th,
+  table.summary td {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+} 

@@ -172,6 +172,12 @@
     detailedResults.innerHTML = '';
     summaryResults.innerHTML = '';
 
+    // Remove any existing back to home button
+    const existingBackButton = document.querySelector('.back-to-home-section');
+    if (existingBackButton) {
+      existingBackButton.remove();
+    }
+
     // Display all calculations in tables
     if (calculations.length > 0) {
       // Create detailed results table
@@ -223,6 +229,28 @@
       summaryResults.innerHTML = summaryHTML;
     } else {
       summaryResults.innerHTML = '<div class="no-results">No valid calculations were performed.</div>';
+    }
+
+    // Add Back to Home button
+    const backButtonHTML = `
+      <div class="back-to-home-section">
+        <a href="index.html" class="btn-primary">Back to Home</a>
+      </div>
+    `;
+    
+    // Append the back button after the summary results
+    summaryResults.insertAdjacentHTML('afterend', backButtonHTML);
+  }
+
+  function initializePage() {
+    // Clear any existing content
+    detailedResults.innerHTML = '';
+    summaryResults.innerHTML = '';
+    
+    // Remove any existing back to home button
+    const existingBackButton = document.querySelector('.back-to-home-section');
+    if (existingBackButton) {
+      existingBackButton.remove();
     }
   }
 
@@ -295,5 +323,5 @@
   document.head.appendChild(style);
 
   // Initialize the page
-  displayAllResults();
+  initializePage();
 })(); 
